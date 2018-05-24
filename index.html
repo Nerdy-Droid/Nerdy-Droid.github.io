@@ -1,1 +1,128 @@
-hello world
+<html>
+<head>
+<title>Game Nite</title>
+<link rel= "stylesheet" src="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="index.js" type="text/javascript" charset="utf-8" async defer></script>
+<style>
+.searchBoxes {
+    padding: 25px;
+    border: 1px solid #4CAF50;
+}
+
+.inputBox{
+     padding: 25px 50px 25px 100px;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="container">
+<h1 align="center">What Game Should You Play?</h1><br/>
+
+<form name="myForm" onsubmit="#">
+
+<div id="search" class="searchBoxes">
+<span class="inputBox"> Search Your Collection: <input type="text" placeholder="Enter BGG User Name" name="numPlay">
+<input type="submit" value="Find Your Games" class="w3-button w3-black"><br/></br/></span>
+</form>
+</div>
+
+<table id="data-table" class="table table-bordered" cellspacing="0" width="100%">
+<thead>
+<tr>
+
+<th>Image</th>
+<th>Rank</th>
+<th>BGG URL</th>
+<th>BG Game ID</th>
+<th>Name</th>
+<th>Min # Players</th>
+<th>Max # Players</th>
+<th>Avg Time</th>
+<th>Year</th>
+<th>Geek Rating</th>
+<th>Mechanic</th>
+<th>Category</th>
+<th>Weight</th>
+</tr>
+
+</thead>
+<tbody>
+
+</tbody>
+<tfoot>
+<tr>
+
+<th></th>
+<th id="search">Rank</th>
+<th></th>
+<th></th>
+<th id="search">Name</th>
+<th id="search">Min # Players</th>
+<th id="search">Max # Players</th>
+<th id="search">Avg Time</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+
+</tr>
+
+</tfoot>
+</table>
+
+
+
+
+</body>
+</html>
+
+<script>
+$(document).ready(function() {
+
+
+    $('#data-table tfoot #search').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+$('#data-table').DataTable({
+	"ajax": "bggData.json",
+	"columns": [
+		{"data" : "image_url"},
+		{"data" : "rank"},
+		{"data" : "bgg_url"},
+		{"data" : "game_id"},
+		{"data" : "min_players"},
+		{"data" : "max_players"},
+		{"data" : "avg_time"},
+		{"data" : "year"},
+		{"data" : "geek_rating"},
+		{"data" : "category"},
+		{"data" : "designer"},
+		{"data" : "weight"}
+	]
+	});
+
+	var table = $('#data-table').DataTable();
+	 table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+	
+});
+});
+
+</script>
