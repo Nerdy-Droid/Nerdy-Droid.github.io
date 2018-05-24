@@ -24,7 +24,7 @@
 <div class="container">
 <h1 align="center">What Game Should You Play?</h1><br/>
 
-<form name="myForm" onsubmit="#">
+<form name="myForm">
 
 <div id="search" class="searchBoxes">
 <span class="inputBox"> Search Your Collection: <input type="text" placeholder="Enter BGG User Name" name="numPlay">
@@ -38,7 +38,6 @@
 
 <th>Image</th>
 <th>Rank</th>
-<th>BGG URL</th>
 <th>BG Game ID</th>
 <th>Name</th>
 <th>Min # Players</th>
@@ -55,25 +54,7 @@
 <tbody>
 
 </tbody>
-<tfoot>
-<tr>
-
-
-<th id="search">Rank</th>
-<th id="search">Name</th>
-<th id="search">Min # Players</th>
-<th id="search">Max # Players</th>
-<th id="search">Avg Time</th>
-
-
-</tr>
-
-</tfoot>
 </table>
-
-
-
-
 </body>
 </html>
 
@@ -89,9 +70,7 @@ $(document).ready(function() {
 $('#data-table').DataTable({
 	"ajax": "bggData.json",
 	"columns": [
-		{"data" : "image_url"},
 		{"data" : "rank"},
-		{"data" : "bgg_url"},
 		{"data" : "game_id"},
 		{"data" : "min_players"},
 		{"data" : "max_players"},
