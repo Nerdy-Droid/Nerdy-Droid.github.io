@@ -7,6 +7,7 @@ getName('hengst2404')
     getName($('#bggID').val())
   })
 
+    
   function getName (userID) {
     emptyList()
     $.ajax({
