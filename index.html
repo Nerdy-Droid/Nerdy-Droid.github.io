@@ -75,9 +75,16 @@ $('#example').DataTable({
 	]
 
 });
-});
 
-var getJSON = $.getJSON("bggData.json", function(data) {
-    console.log(data.result);
+$.ajax({
+ type: "GET",
+ url: "bggData.json",
+ success: function(result)
+ {
+ console.log(result);
+ var data = result;
+  }
+ });
+
 });
 </script>
