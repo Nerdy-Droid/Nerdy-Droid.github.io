@@ -75,6 +75,14 @@ $('#example').DataTable({
 	]
 
 });
-
+$.ajax({
+              type: "GET",
+              url: "bggData.json",
+              success: function(result)
+              {
+              console.log(result);
+			  var data = result.game_id;
+			}
+              });
 });
 </script>
