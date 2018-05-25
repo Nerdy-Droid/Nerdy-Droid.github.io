@@ -75,9 +75,9 @@ $('#example').DataTable({
 });
 	});
 
-$('#userID').on('click', function (e) {
-    getUserGames($('#bggID').val())
-  })
+$('#userID').click(function () {
+    getUserGames($('#bggID').val());
+  });
 
 function getUserGames(userID){
 var id = userID;
@@ -89,7 +89,7 @@ xhttp.onreadystatechange = function() {
         myFunction(this);
     }
 };
-xhttp.open("GET", "https://boardgamegeek.com/xmlapi/collection/hengst2404", true);
+xhttp.open("GET", string, true);
 xhttp.send();
 
 function myFunction(xml) {
