@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="bggAPI.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+    
+  
+<h2>Search Your BGG Collection.</h2>
+
+<input type="text" name="BGG ID" value="" placeholder="User ID" id="bggID">
+<input type="submit" value="Get Games" id="getName">
+
+  <br/><br/>
+
+
+<h3><span id="userName"></span>: has <span id="total"></span> games.</h3>  
+    
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <div id="picture"></div>
+
+ <table id="table" class="display" style="width:100%">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Game ID</th>
+            </tr>
+      </thead>
+                 
+  </table>
+
+</body>
+</html>
