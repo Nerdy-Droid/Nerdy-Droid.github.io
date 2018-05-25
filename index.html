@@ -26,8 +26,8 @@
 <form name="myForm">
 
 <div id="search" class="searchBoxes">
-<span class="inputBox"> Search Your Collection: <input type="text" placeholder="Enter BGG User Name" name="numPlay">
-<input type="submit" value="Find Your Games"><br/></br/></span>
+<span class="inputBox"> Search Your Collection: <input type="text" id="bggID" placeholder="Enter BGG User Name" name="numPlay">
+<input type="submit" id="userID" value="Find Your Games"><br/></br/></span>
 </form>
 </div>
 
@@ -75,13 +75,22 @@ $('#example').DataTable({
 });
 	});
 
+getUserGames(aebrey)
+  $('#getName').on('click', function (e) {
+    getUserGames($('#bggID').val())
+  })
+
+function getUserGames(userID){
+var id = userID;
+const url = "https://boardgamegeek.com/xmlapi/collection/";
+var string = url + id;
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         myFunction(this);
     }
 };
-xhttp.open("GET", "https://boardgamegeek.com/xmlapi/collection/hengst2404", true);
+xhttp.open("GET", string, true);
 xhttp.send();
 
 function myFunction(xml) {
@@ -93,5 +102,6 @@ function myFunction(xml) {
         txt.push(parseInt(x[i].getAttribute('objectid')));
     }
     console.log(txt)
+}
 }
 </script>
