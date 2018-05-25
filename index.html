@@ -66,25 +66,20 @@ $(document).ready(function() {
     } );
 
 $('#example').DataTable({
-	"ajax": {
-	"url": "bggData.json",
-	"dataSrc": "tableData",
+	"ajax": "bggData.json",
 	"columns": [
-		{"tableData" : "names"},
-		{"tableData" : "game_id"},
-		{"tableData" : "min_players"},
-		{"tableData" : "max_players"},
-		{"tableData" : "avg_time"},
-		{"tableData" : "year"},
-		{"tableData" : "geek_rating"},
-		{"tableData" : "mechanic"},
-		{"tableData" : "category"},
-		{"tableData" : "weight"}
+		{"data" : "names"},
+		{"data" : "game_id"},
+		{"data" : "min_players"},
+		{"data" : "max_players"},
+		{"data" : "avg_time"},
+		{"data" : "year"},
+		{"data" : "geek_rating"},
+		{"data" : "mechanic"},
+		{"data" : "category"},
+		{"data" : "weight"}
 	]
-	}
 	});
-
-
 
 	var table = $('#example').DataTable();
 	 table.columns().every( function () {
