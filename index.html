@@ -35,7 +35,7 @@
 <thead>
 <tr>
 
-<th>Name</th>
+
 <th>Rank</th>
 <th>BG Game ID</th>
 <th>Min # Players</th>
@@ -68,8 +68,7 @@ $(document).ready(function() {
 $('#data-table').DataTable({
 	"ajax": "bggData.json",
 	"columns": [
-		{"data" : "names"},	
-	    {"data" : "rank"},
+		{"data" : "rank"},
 		{"data" : "game_id"},
 		{"data" : "min_players"},
 		{"data" : "max_players"},
