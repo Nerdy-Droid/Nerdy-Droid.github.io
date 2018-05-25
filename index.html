@@ -89,6 +89,8 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", string, true);
 xhttp.send();
 
+});
+
 function myFunction(xml) {
     var x, i, xmlDoc, txt;
     xmlDoc = xml.responseXML;
@@ -98,7 +100,5 @@ function myFunction(xml) {
         txt.push(parseInt(x[i].getAttribute('objectid')));
     }
     console.log(txt)
-
 }
-});
 </script>
