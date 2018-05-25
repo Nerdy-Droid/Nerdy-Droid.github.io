@@ -31,7 +31,7 @@
 </form>
 </div>
 
-<table id="data-table" class="display" style="width:100%">
+<table id="example" class="dataTable" style="width:100%">
 <thead>
 <tr>
 
@@ -60,12 +60,12 @@
 $(document).ready(function() {
 
 
-    $('#data-table tfoot #search').each( function () {
+    $('#example tfoot #search').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
     } );
 
-$('#data-table').DataTable({
+$('#example').DataTable({
 	"ajax": "bggData.json",
 	"columns": [
 		{"data" : "rank"},
@@ -81,7 +81,7 @@ $('#data-table').DataTable({
 	]
 	});
 
-	var table = $('#data-table').DataTable();
+	var table = $('#example').DataTable();
 	 table.columns().every( function () {
         var that = this;
  
