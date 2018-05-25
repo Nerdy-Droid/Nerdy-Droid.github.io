@@ -76,11 +76,8 @@ $('#example').DataTable({
 	});
 
 $('#userID').click(function () {
-    getUserGames($('#bggID').val());
-  });
 
-function getUserGames(userID){
-var id = userID;
+var id = $('#bggID').val();
 const url = "https://boardgamegeek.com/xmlapi/collection/";
 var string = url + id;
 var xhttp = new XMLHttpRequest();
@@ -101,6 +98,7 @@ function myFunction(xml) {
         txt.push(parseInt(x[i].getAttribute('objectid')));
     }
     console.log(txt)
+
 }
-}
+});
 </script>
