@@ -74,11 +74,8 @@ $('#example').DataTable({
 
 });
 	});
-'use strict';
-(function() {
 
-getUserGames('aebrey')
-  $('#userID').on('click', function (e) {
+$('#userID').on('click', function (e) {
     getUserGames($('#bggID').val())
   })
 
@@ -106,5 +103,4 @@ function myFunction(xml) {
     console.log(txt)
 }
 }
-})
 </script>
