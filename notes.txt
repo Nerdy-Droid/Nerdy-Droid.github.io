@@ -46,3 +46,13 @@ getName('hengst2404')
     alert('There was an error retrieving BGG data :(')
   }
 })()
+
+$.ajax({
+              type: "GET",
+              url: "bggData.json",
+              success: function(result)
+              {
+              console.log(result);
+			  var data = result;
+			}
+              });
