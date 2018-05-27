@@ -88,31 +88,18 @@ $('#example').DataTable({
   function getGames (userID) {
     var id = userID
     var string = url + id     
-    
-    $.ajax({
-     url: string,
-     dataType: "xml",
-      // Work with the response
+	$.ajax({
+      url: url + userID,
+      dataType: "xml",
       success: function (xml) {
-        console.log (xml)
-        updateUISuccess(xml)
-      },
-
-      error: function () {
-        updateUIError()
-      }
-    })
-  }
-
-  function updateUISuccess (xml) {
-    $(xml).find('items').each(function(){
-	gameID.push($(this).find('item').attr('objectid'))
-	
-})
-         console.log(gameID)
-  }
-
-  function updateUIError () {
-    alert('There was an error getting your games :(')
-  }
+         console.log(xml)
+              
+        $(xml).find('item').each(function(){
+            gameID.push($(this).attr('objectid'));
+		})           
+            console.log(gameID)
+	} 
+}) 
+    }
+    
 </script>
