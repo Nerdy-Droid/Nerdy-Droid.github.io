@@ -60,18 +60,6 @@
 
 <script>
 
-(function () {
-var uGames = [174430, 161936, 182028];
-var arr = new Array()
-$.getJSON("bggData.json") 
-.done(function(json) {
-$.each(json.data, function(j, items) {	
-	    arr.push(json.data[j])
-		
-})
-console.log(arr)
-})
-
 $(document).ready(function() {
 
 $('#example').DataTable({
@@ -90,5 +78,42 @@ $('#example').DataTable({
 
 });
 });
-})()
+
+var url = "https://boardgamegeek.com/xmlapi/collection/"
+  var id = new Array();
+  getGames('aebrey')
+
+  $('#getID').on('click', function (e) {
+    getGames($('#bggID').val())
+  })
+
+  function getGames (userID) {
+    var id = userID
+    var string = url + userID     
+    
+    $.ajax({
+     url: string,
+     dataType: "xml",
+      // Work with the response
+      success: function (response) {
+        console.log (response)
+        updateUISuccess(response)
+      },
+
+      error: function () {
+        updateUIError()
+      }
+    })
+  }
+
+  function updateUISuccess (response) {
+    $(response).find('items').each(function(){
+    id.push($(this).find('item').attr('objectid'))
+})
+         console.log(id)
+  }
+
+  function updateUIError () {
+    alert('There was an error getting weather data :(')
+  }
 </script>
