@@ -80,9 +80,7 @@ $('#example').DataTable({
 });
 
   var url = "https://boardgamegeek.com/xmlapi/collection/"
-  var id = new Array();
-  getGames('aebrey')
-
+  var gameID = new Array();
   $('#getID').on('click', function (e) {
     getGames($('#bggID').val())
   })
@@ -108,9 +106,10 @@ $('#example').DataTable({
 
   function updateUISuccess (xml) {
     $(xml).find('items').each(function(){
-    id.push($(this).find('item').attr('objectid'))
+	gameID.push($(this).find('item').attr('objectid'))
+	
 })
-         console.log(id)
+         console.log(gameID)
   }
 
   function updateUIError () {
