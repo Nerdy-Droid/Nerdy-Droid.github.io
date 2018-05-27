@@ -1,5 +1,3 @@
-'use strict';
-(function () {
 const url = "https://boardgamegeek.com/xmlapi/collection/"
 
  $('#getID').on('click', function (e) {
@@ -7,7 +5,6 @@ const url = "https://boardgamegeek.com/xmlapi/collection/"
   })
    
   function getName (userID) {
-    var id = userID
     var string = url + userID     
     var xhttp = new XMLHttpRequest();
          xhttp.onreadystatechange = function() {
@@ -29,6 +26,4 @@ const url = "https://boardgamegeek.com/xmlapi/collection/"
 console.log(txt)
       }
     }
-
- })()
 
