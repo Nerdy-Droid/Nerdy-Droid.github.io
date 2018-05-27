@@ -28,7 +28,7 @@ getName('aebrey')
              for (i = 0; i < x.length; i++) { 
                  txt.push(parseInt(x[i].getAttribute('objectid')));
              }
-
+console.log(txt)
       $.ajax({
       type: "GET",
       url: "bggData.json",
