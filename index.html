@@ -60,6 +60,18 @@
 
 <script>
 
+(function () {
+var uGames = [174430, 161936, 182028];
+var arr = new Array()
+$.getJSON("bggData.json") 
+.done(function(json) {
+$.each(json.data, function(j, items) {	
+	    arr.push(json.data[j])
+		
+})
+console.log(arr)
+})
+
 $(document).ready(function() {
 
 $('#example').DataTable({
@@ -78,28 +90,6 @@ $('#example').DataTable({
 
 });
 });
+})()
 
-  var url = "https://boardgamegeek.com/xmlapi/collection/"
-  var gameID = new Array();
-  $('#getID').on('click', function (e) {
-    getGames($('#bggID').val())
-  })
-
-  function getGames (userID) {
-    var id = userID
-    var string = url + id     
-	$.ajax({
-      url: url + userID,
-      dataType: "xml",
-      success: function (xml) {
-         console.log(xml)
-              
-        $(xml).find('item').each(function(){
-            gameID.push($(this).attr('objectid'));
-		})           
-            console.log(gameID)
-	} 
-}) 
-    }
-    
 </script>
