@@ -38,5 +38,5 @@ function getName (userID) {
             console.log(arr)
         })	
       }
-    })
-    ()
+    }
+    }) ()
