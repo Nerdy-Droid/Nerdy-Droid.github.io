@@ -2,6 +2,7 @@
 <html>
     <head>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script type="text/javascript" src="bggData.json"></script>
 
     </head>
 <body>
@@ -34,9 +35,17 @@ $('#getID').on('click', function (e) {
              for (i = 0; i < x.length; i++) { 
                  txt.push(parseInt(x[i].getAttribute('objectid')));
              }
-console.log(txt)
-    document.getElementById("demo").innerHTML = txt; 
+    console.log(txt)
+    document.getElementById("demo").innerHTML = txt + '<br/>'; 
 }
+    var arr = new Array()
+            $.getJSON("bggData.json") 
+            .done(function(json) {
+            $.each(json.data, function(j, items) {	
+                arr.push(json.data[j])
+            })
+            console.log(arr)
+})
 }
 
 </script>

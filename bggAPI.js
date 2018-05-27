@@ -1,3 +1,8 @@
+'use strict';
+(function () {
+
+ getName('hengst2404')
+
 $('#getID').on('click', function (e) {
   getName($('#bggID').val())
 })
@@ -31,6 +36,7 @@ function getName (userID) {
                 arr.push(json.data[j])
             })
             console.log(arr)
-            })	
-            }
-            }
+        })	
+      }
+    })
+    })()
