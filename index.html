@@ -68,7 +68,7 @@ $.getJSON("bggData.json")
 .done(function(json) {
 $.each(uGames, function(i, items) {
 $.each(json.data, function(j, items) {	
-	if (uGames[i] === jason.data[j]) {	  
+	if (uGames[i] === json.data[j]) {	  
 		arr.push(json.data[j])
 		console.log(arr)
 }
