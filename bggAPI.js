@@ -2,7 +2,7 @@
 (function () {
 const url = "https://boardgamegeek.com/xmlapi/collection/"
 
-getName('hengst2404')
+getName('aebrey')
   $('#getID').on('click', function (e) {
     getName($('#bggID').val())
   })
@@ -29,7 +29,7 @@ getName('hengst2404')
                  txt.push(parseInt(x[i].getAttribute('objectid')));
              }
     console.log(txt);
-         }
+            }
   }
 
 })()

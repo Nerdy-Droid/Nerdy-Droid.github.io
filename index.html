@@ -75,14 +75,8 @@ $('#example').DataTable({
 	]
 
 });
-$.ajax({
-              type: "GET",
-              url: "bggData.json",
-              success: function(result)
-              {
-              console.log(result);
-			  var data = result.game_id;
-			}
-              });
+	
+var json = JSON.stringify("bggData.JSON");
+console.log(json)
 });
 </script>
