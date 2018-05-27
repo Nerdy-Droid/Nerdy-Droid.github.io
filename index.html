@@ -67,17 +67,10 @@ var arr = new Array()
 $.getJSON( "bggData.json") 
 
 .done(function(json) {
- for (j=0; j < uGames.length; i++ ) {
-	for (i=0; i < json.data.length; i++) {
-	if (uGames[j] === json.data[i].game_id) {
-		arr.push(json.data[i])
+ 		arr.push(json.data[i])
 		console.log(json.data[i])
-	}
-}
-}
-});
- 
- })()
+	});
+})()
 
 $(document).ready(function() {
 
