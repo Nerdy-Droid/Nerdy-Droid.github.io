@@ -62,13 +62,13 @@
 
 var data
 (function () {
-var data = new Array();
+var games = new Array();
 $.getJSON( "bggData.json") 
 
 .done(function(data) {
   $.each(data.games, function(i, items) {
 	var id = data.games[i].game_id;
-	data = jQuery.makeArray(id);
+	games = jQuery.makeArray(id);
 	});
   console.log(data)
  });
