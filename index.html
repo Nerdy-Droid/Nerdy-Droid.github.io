@@ -63,18 +63,21 @@
 var data
 (function () {
 
-var games;
+var uGames = [174430, 161936, 182028];
 
 $.getJSON( "bggData.json") 
 
 .done(function(data) {
-  $.each(data.games, function(i, items) {
-	var id = data.games[i].game_id;
-	var games = jQuery.makeArray(id[i]);
-	});
-  console.log(games)
- });
-}) ()
+ for (j=0; j < uGames.length; i++ ) {
+	for (i=0; i < games.length; i++) {
+	if (uGames[j] === data.games[i].game_id) {
+		console.log(data.games[i])
+	}
+}
+}
+});
+ 
+ })()
 
 $(document).ready(function() {
 
