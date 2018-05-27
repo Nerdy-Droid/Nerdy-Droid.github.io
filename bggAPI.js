@@ -35,14 +35,15 @@ getName('aebrey')
 
  })()
 
-function getUserGames()
+function getUserGames() {
 $.ajax({
   type: "GET",
   url: "bggData.json",
   success: function(result){
     var data = result.game_id
     var id = new Array();
-          
+    var txt = myFunction(xml)
+         
     for (i=0; i < txt.length; i++) {
         console.log(txt[i])
           for (j=0; j < data.length; j++) {
@@ -51,8 +52,9 @@ $.ajax({
                             
             }
             
-        }
+                  }
         console.log(id)
              }
             }
     });
+  }
