@@ -66,9 +66,10 @@ var arr = new Array()
 $.getJSON("bggData.json") 
 .done(function(json) {
 $.each(json.data, function(j, items) {	
-	  arr.push(json.data[j])
-		console.log(arr)
+	    arr.push(json.data[j])
+		
 })
+console.log(arr)
 })
 
 $(document).ready(function() {
