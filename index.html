@@ -79,7 +79,7 @@ $('#example').DataTable({
 });
 });
 
-var url = "https://boardgamegeek.com/xmlapi/collection/"
+  var url = "https://boardgamegeek.com/xmlapi/collection/"
   var id = new Array();
   getGames('aebrey')
 
@@ -95,9 +95,9 @@ var url = "https://boardgamegeek.com/xmlapi/collection/"
      url: string,
      dataType: "xml",
       // Work with the response
-      success: function (response) {
-        console.log (response)
-        updateUISuccess(response)
+      success: function (xml) {
+        console.log (xml)
+        updateUISuccess(xml)
       },
 
       error: function () {
@@ -106,14 +106,14 @@ var url = "https://boardgamegeek.com/xmlapi/collection/"
     })
   }
 
-  function updateUISuccess (response) {
-    $(response).find('items').each(function(){
+  function updateUISuccess (xml) {
+    $(xml).find('items').each(function(){
     id.push($(this).find('item').attr('objectid'))
 })
          console.log(id)
   }
 
   function updateUIError () {
-    alert('There was an error getting weather data :(')
+    alert('There was an error getting your games :(')
   }
 </script>
