@@ -62,20 +62,14 @@
 
 var data
 (function () {
-
-var userID = new Array();
-
 $.getJSON( "bggData.json") 
 
 .done(function(data) {
   $.each(data.games, function(i, items) {
-	for (i=0; i < length.games; i++) {
-	userID.push(data.games[i].game_id);			
-	}
-	console.log(userID);
+	console.log( "JSON Data: " + data.games[i].game_id );
   });
  });
-}) ();
+}) ()
 
 $(document).ready(function() {
 
@@ -83,15 +77,15 @@ $('#example').DataTable({
 	"ajax": "bggData.json",
 	"datasrc": "games",
 	"columns": [
-		{"data" : "names"},
-		{"data" : "min_players"},
-		{"data" : "max_players"},
-		{"data" : "avg_time"},
-		{"data" : "year"},
-		{"data" : "geek_rating"},
-		{"data" : "mechanic"},
-		{"data" : "category"},
-		{"data" : "weight"}
+		{"games" : "names"},
+		{"games" : "min_players"},
+		{"games" : "max_players"},
+		{"games" : "avg_time"},
+		{"games" : "year"},
+		{"games" : "geek_rating"},
+		{"games" : "mechanic"},
+		{"games" : "category"},
+		{"games" : "weight"}
 	]
 
 });
