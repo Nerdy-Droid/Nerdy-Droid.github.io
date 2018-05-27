@@ -61,10 +61,15 @@
 <script>
 
 var data
+(function () {
+$.getJSON( "bggData.json") 
 
-$.getJSON( "bggData.json", function(data) {
-  console.log( "JSON Data: " + data.games[ 3 ].names );
+.done(function(data) {
+  $.each(data.games, function(i, items) {
+	console.log( "JSON Data: " + data.games[i].game_id );
+  });
  });
+}) ();
 
 $(document).ready(function() {
 
