@@ -67,11 +67,11 @@ var uGames = [174430, 161936, 182028];
 
 $.getJSON( "bggData.json") 
 
-.done(function(data) {
+.done(function(json) {
  for (j=0; j < uGames.length; i++ ) {
-	for (i=0; i < games.length; i++) {
-	if (uGames[j] === data.games[i].game_id) {
-		console.log(data.games[i])
+	for (i=0; i < json.data.length; i++) {
+	if (uGames[j] === json.data[i].game_id) {
+		console.log(json.data[i])
 	}
 }
 }
@@ -83,7 +83,6 @@ $(document).ready(function() {
 
 $('#example').DataTable({
 	"ajax": "bggData.json",
-	"datasrc": "games",
 	"columns": [
 		{"data" : "names"},
 		{"data" : "min_players"},
