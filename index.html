@@ -65,7 +65,6 @@ var data;
 
 function preload() {
 	data = loadJSON("bggData.json");
-	console.log (data)
 }
 
 $(document).ready(function() {
@@ -73,15 +72,15 @@ $(document).ready(function() {
 $('#example').DataTable({
 	"ajax": "bggData.json",
 	"columns": [
-		{"data" : "names"},
-		{"data" : "min_players"},
-		{"data" : "max_players"},
-		{"data" : "avg_time"},
-		{"data" : "year"},
-		{"data" : "geek_rating"},
-		{"data" : "mechanic"},
-		{"data" : "category"},
-		{"data" : "weight"}
+		{"games" : "names"},
+		{"games" : "min_players"},
+		{"games" : "max_players"},
+		{"games" : "avg_time"},
+		{"games" : "year"},
+		{"games" : "geek_rating"},
+		{"games" : "mechanic"},
+		{"games" : "category"},
+		{"games" : "weight"}
 	]
 
 });
