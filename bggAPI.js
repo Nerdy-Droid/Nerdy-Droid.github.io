@@ -1,10 +1,6 @@
-const url = "https://boardgamegeek.com/xmlapi/collection/"
-
- $('#getID').on('click', function (e) {
-    getName($('#bggID').val())
-  })
-   
+  
   function getName (userID) {
+    const url = "https://boardgamegeek.com/xmlapi/collection/"
     var string = url + userID     
     var xhttp = new XMLHttpRequest();
          xhttp.onreadystatechange = function() {
