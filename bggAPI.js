@@ -2,8 +2,7 @@
 (function () {
 const url = "https://boardgamegeek.com/xmlapi/collection/"
 
-getID('aebrey')
-  $('#getID').on('click', function (e) {
+ $('#getID').on('click', function (e) {
     getName($('#bggID').val())
   })
    
@@ -20,7 +19,6 @@ getID('aebrey')
          xhttp.send();
          
          function myFunction(xml) {
-            
              var x, i, xmlDoc, txt;
              xmlDoc = xml.responseXML;
              txt = new Array;
