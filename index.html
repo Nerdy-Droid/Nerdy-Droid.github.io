@@ -62,11 +62,17 @@
 
 var data
 (function () {
+
+var userID = new Array();
+
 $.getJSON( "bggData.json") 
 
 .done(function(data) {
   $.each(data.games, function(i, items) {
-	console.log( "JSON Data: " + data.games[i].game_id );
+	for (i=0; i < length.games; i++) {
+	userID.push(data.games[i].game_id);			
+	}
+	console.log(userID);
   });
  });
 }) ();
