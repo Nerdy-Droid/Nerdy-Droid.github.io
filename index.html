@@ -64,12 +64,16 @@
 
 var uGames = [174430, 161936, 182028];
 var arr = new Array()
-$.getJSON( "bggData.json") 
+$.getJSON("bggData.json") 
 .done(function(json) {
-$.each(json.data, function(i, items) {
-		arr.push(json.data[i])
-		console.log(json.data[i])
-	});
+$.each(uGames, function(i, items) {
+$.each(json.data, function(j, items) {	
+	if (uGames[i] === jason.data[j]) {	  
+		arr.push(json.data[j])
+		console.log(arr)
+}
+})
+})
 })
 
 $(document).ready(function() {
