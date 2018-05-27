@@ -2,7 +2,7 @@
 (function () {
 const url = "https://boardgamegeek.com/xmlapi/collection/"
 
-getName('aebrey')
+getID('aebrey')
   $('#getID').on('click', function (e) {
     getName($('#bggID').val())
   })
