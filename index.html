@@ -60,11 +60,12 @@
 </html>
 
 <script>
-$(document).ready(function() {
 
-funcion preload() {
+function preload() {
 	data = loadJSON("bggData.json");
 }
+
+$(document).ready(function() {
 
 $('#example').DataTable({
 	"ajax": "bggData.json",
