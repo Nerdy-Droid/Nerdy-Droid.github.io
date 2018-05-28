@@ -35,11 +35,20 @@ function getName (userID) {
             for(var j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
                   userGames.push(json.data[j]);
-                      
+                    
                 } 
                 }
                 }
           console.log(userGames);
+          var missingGames = new Array()
+            for (var i=0; i < txt.length; i++) {
+            for(var j=0; j < arr.length; j++) {
+                if (txt[i] !== json.data[j].game_id) {
+                  missingGames.push(txt[i]]);
+                } 
+                }
+                }
+          console.log(missingGames);
           var userG = new Array();
           for (i=0; i < userGames.length; i++) {
             userG.push(Object.values(userGames[i]));
