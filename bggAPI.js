@@ -31,7 +31,6 @@ function getName (userID) {
             })
             console.log(arr)
             var userGames = new Array()
-            var missingGames = new Array()
             for (var i=0; i < txt.length; i++) {
             for(var j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
@@ -41,7 +40,14 @@ function getName (userID) {
                 }
                 }
           console.log(userGames);
-          console.log(userGames[0].names);
+          userG = [] 
+          for (var b=0; b < userGames.length; b++) {
+          userG[b].push([])
+          }
+          for (var a=0; a < userGames.length; a++) {
+                    userG[a][a].push(json.data[j].names,json.data[j].weight);
+          }
+          console.log(userG);
           getGames(userGames);	
         })
                  
