@@ -1,18 +1,10 @@
 function getGames (games) {
-    $( "#user" ).show();
+    $("#allGames").hide();
+    $("#user").show();
     $(document).ready(function() {
     $('#user').DataTable({
         data: games,
         columns: [
-            {data: "image_url",
-                "render": function (data,type,row,meta) {
-                if(type === 'display') {
-                    data ='<img src="' + "image_url" + '">';
-                }
-                return data;
-            }
-        
-        },
             {data : "names",
                 "render": function(data, type, row, meta){
                if(type === 'display'){
