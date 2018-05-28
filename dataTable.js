@@ -1,4 +1,6 @@
 function getGames (games) {
+    document.getElementById("user").style.display = "block";
+    
     $(document).ready(function() {
     
        $('#user').DataTable({
@@ -27,4 +29,11 @@ function getGames (games) {
    
 });
     });
+}
+
+function clearTable () {
+    var table = $('#example').DataTable();
+     table
+        .clear()
+        .draw();   
 }
