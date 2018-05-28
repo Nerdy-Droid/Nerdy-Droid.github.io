@@ -13,7 +13,7 @@ console.log(games)
        $('#user').DataTable({
         data: games,
         columns: [
-            {data : "names",
+              {data : "names",
                 "render": function(data, type, row, meta){
                if(type === 'display'){
                 data = '<a href="' + data.bgg_url + '">' + data + '</a>';
