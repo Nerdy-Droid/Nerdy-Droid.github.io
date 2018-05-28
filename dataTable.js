@@ -32,7 +32,7 @@ function getGames (games) {
 }
 
 function clearTable () {
-    var table = $('#example').DataTable();
+    var table = $('#user').DataTable();
      table
         .clear()
         .draw();   
