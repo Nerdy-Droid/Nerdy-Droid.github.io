@@ -1,7 +1,5 @@
 function getGames (games) {
-    $("#allGames").hide();
-    $("#user").show();
-
+     $("#user").show();
     $(document).ready(function() {
     $('#user tfoot #search').each( function () {
         var title = $(this).text();
@@ -14,7 +12,7 @@ function getGames (games) {
             {data : "names",
                 "render": function(data, type, row, meta){
                if(type === 'display'){
-                   data = '<a href="' + "bgg_url" + '">' + data + '</a>';
+                data = '<a href="' + data.bgg_url + '">' + data + '</a>';
                }
                
                return data;
@@ -45,4 +43,5 @@ function getGames (games) {
         } );
        });
     });
+    $("#allGames").hide();
 }
