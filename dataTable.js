@@ -1,6 +1,7 @@
 function getGames (games) {
-     $("#user").show();
-    $(document).ready(function() {
+    $("#allGames").hide();
+    $("#user").show();
+        $(document).ready(function() {
     $('#user tfoot #search').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
@@ -43,5 +44,28 @@ function getGames (games) {
         } );
        });
     });
-    $("#allGames").hide();
+}
+
+
+function allGames() {
+    $( "#user" ).hide();
+    $( "#allGames" ).show();
+    $(document).ready(function() {
+        $('#allGames').DataTable({
+            "ajax": "bggData.json",
+            "columns": [
+                {"data" : "names"},
+                {"data" : "min_players"},
+                {"data" : "max_players"},
+                {"data" : "avg_time"},
+                {"data" : "year"},
+                {"data" : "geek_rating"},
+                {"data" : "mechanic"},
+                {"data" : "category"},
+                {"data" : "weight"}
+            ]
+        
+        });
+        });
+
 }

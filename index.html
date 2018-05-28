@@ -29,6 +29,7 @@
 <div id="search" class="searchBoxes">
 <span class="inputBox"> Search Your Collection: <input type="text" id="bggID" placeholder="Enter BGG User Name" name="numPlay">
 <input type="submit" id="getID" onclick=" getName($('#bggID').val()); return false;" value="Find Your Games"><br/></br/></span>
+<input type="submit" id="getAllGames" onclick=" allGames(); return false;" value="Search Top BGG Games"><br/></br/></span>
 </form>
 </div>
 
@@ -47,26 +48,6 @@
 				</tr>
 				</thead>
 </table>
-<script>
-$(document).ready(function() {
-	$( "#user" ).hide();
-	$('#allGames').DataTable({
-		"ajax": "bggData.json",
-		"columns": [
-			{"data" : "names"},
-			{"data" : "min_players"},
-			{"data" : "max_players"},
-			{"data" : "avg_time"},
-			{"data" : "year"},
-			{"data" : "geek_rating"},
-			{"data" : "mechanic"},
-			{"data" : "category"},
-			{"data" : "weight"}
-		]
-	
-	});
-	});
-</script>
 <table id="user" class="hover" style="width:100%">
 		<thead>
 				<tr>
