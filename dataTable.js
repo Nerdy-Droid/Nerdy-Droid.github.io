@@ -4,15 +4,13 @@ function getGames (games) {
     $('#user').DataTable({
         data: games,
         columns: [
-            {data: "image_url"
-
-            "render": function (data,type,row,meta) {
+            {data: "image_url",
+                "render": function (data,type,row,meta) {
                 if(type === 'display') {
-                    data ='<img src="' + image_url + '">',
+                    data ='<img src="' + image_url + '">';
                 }
             }
-        
-        
+        return data;
         },
             {data : "names",
                 "render": function(data, type, row, meta){
