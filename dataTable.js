@@ -7,7 +7,7 @@ function getGames (games) {
             {data: "image_url",
                 "render": function (data,type,row,meta) {
                 if(type === 'display') {
-                    data ='<img src="' + image_url + '">';
+                    data ='<img src="' + "image_url" + '">';
                 }
                 return data;
             }
@@ -16,7 +16,7 @@ function getGames (games) {
             {data : "names",
                 "render": function(data, type, row, meta){
                if(type === 'display'){
-                   data = '<a href="' + bgg_url + '">' + data + '</a>';
+                   data = '<a href="' + "bgg_url" + '">' + data + '</a>';
                }
                
                return data;
