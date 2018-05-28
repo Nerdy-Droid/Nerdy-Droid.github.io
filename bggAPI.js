@@ -40,6 +40,7 @@ function getName (userID) {
                 } 
                 }
                 }
+        console.log(userGames);
           console.log(userGames[0].names);
           getGames(userGames);	
         })

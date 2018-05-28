@@ -3,7 +3,7 @@ $(document).ready(function() {
 $('#example').DataTable({
 	data: games,
 	columns: [
-		{userGames[0].names : "Name"},
+		{title : "Name"},
 		{title : "Avg Time"},
 		{title : "BGG URL"},
 		{title : "Category"},
