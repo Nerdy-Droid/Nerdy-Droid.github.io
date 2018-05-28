@@ -2,13 +2,13 @@ function getGames (games) {
     $("#allGames").hide();
     $("#user").show();
 
+    $(document).ready(function() {
     $('#user tfoot #search').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
     } );
 
-    $(document).ready(function() {
-    $('#user').DataTable({
+    var table = $('#user').DataTable({
         data: games,
         columns: [
             {data : "names",
@@ -32,8 +32,8 @@ function getGames (games) {
            
         ]
     });
-    var table = $('#user).DataTable();
-	 table.columns().every( function () {
+
+    table.columns().every( function () {
         var that = this;
  
         $( 'input', this.footer() ).on( 'keyup change', function () {
@@ -43,5 +43,6 @@ function getGames (games) {
                     .draw();
             }
         } );
-     });
-    }
+       });
+    });
+}
