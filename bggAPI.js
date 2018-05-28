@@ -40,34 +40,18 @@ function getName (userID) {
                 }
                 }
           console.log(userGames);
-          getGames(userGames);	
+                var array1 = new Array (userGames.length);
+               for (var i=0; i < userGames.length; i ++) {
+                array1[i] = new Array (userGames.length);
+                for (var j=0; j < userGames.length; j++) {
+                      array1[i][j] = userGames[j];
+                      conole.log (array1[i][j] + "&emsp;")
+               }
+                }
+
+          getGames(array1);	
         })
                  
       }
     }  
-    function getGames (games) {
-      $(document).ready(function() {
-          $('#example').DataTable({
-              data: games,
-              columns: [
-              {title : "Name"},
-              {title : "Avg Time"},
-              {title : "BGG URL"},
-              {title : "Category"},
-              {title : "Designer"},
-              {title : "Game ID"},
-              {title : "Geek Rating"},
-              {title : "Image URL"},
-              {title : "Max Players"},
-              {title : "Max Time"},
-              {title : "Mechanic"},
-              {title : "Min Players"},
-              {title : "Min Time"},
-              {title : "Names"},
-              {title : "Rank"},
-              {title : "Weight"},
-              {title : "Year"}
-              ]
-          });
-         });
-      }
+    
