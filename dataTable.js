@@ -5,10 +5,12 @@ function getGames (games) {
         data: games,
         columns: [
             {title : "Rank"},
-            {title : "BGG URL",
-                    "render": funcion (data,type,row,meta) {
-                        for (i=0; i < games.length; i++) {
+            {title : 
+                
+                    "BGG URL",
+                    "render": funcion (data,type,row,meta){
                         if (type === 'display') {
+                        for (i=0; i < games.length; i++) {
                         data = '<a href="' + data + '">'+ games[i].names +  '</a>';
                         }
                 }
