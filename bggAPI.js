@@ -1,6 +1,7 @@
 'use strict';
 (function () {
-
+  const url = "https://boardgamegeek.com/xmlapi/collection/"
+  
  getName('hengst2404')
 
 $('#getID').on('click', function (e) {
@@ -8,7 +9,7 @@ $('#getID').on('click', function (e) {
 })
 
 function getName (userID) {
-  const url = "https://boardgamegeek.com/xmlapi/collection/"
+  
   var string = url + userID     
   var xhttp = new XMLHttpRequest();
        xhttp.onreadystatechange = function() {
@@ -40,13 +41,13 @@ function getName (userID) {
             for(j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
                   userGames.push(json.data[j])
-                         
+                      
                 }
                 }
                 }
-                
-                 })
-                 console.log(userGames)	
+          console.log(userGames)	
+        })
+                 
       }
     }
     }) ()
