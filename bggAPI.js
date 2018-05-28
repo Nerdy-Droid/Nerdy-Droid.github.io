@@ -37,13 +37,10 @@ function getName (userID) {
                 if (txt[i] === json.data[j].game_id) {
                   userGames.push(json.data[j]);
                       
-                } else if (txt[i] !== json.data[j].game_id) {
-                  missingGames.push(json.data[j]);
-                }
+                } 
                 }
                 }
           console.log(userGames);
-          console.log(missingGames);
           getGames(userGames);	
         })
                  
