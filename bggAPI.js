@@ -38,8 +38,8 @@ function getName (userID) {
             })
             console.log(arr)
             var userGames = new Array()
-            for (i=0; i < txt.length; i++) {
-            for(j=0; j < arr.length; j++) {
+            for (var i=0; i < txt.length; i++) {
+            for(var j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
                   userGames.push(json.data[j])
                       
