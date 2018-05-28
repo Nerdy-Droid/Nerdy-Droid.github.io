@@ -40,7 +40,7 @@ function getName (userID) {
                 }
                 }
           console.log(userGames);
-          userG = [] 
+          var userG = new Array (); 
           for (var b=0; b < userGames.length; b++) {
           userG[b].push([])
           }
