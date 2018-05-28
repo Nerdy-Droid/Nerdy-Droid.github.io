@@ -36,6 +36,7 @@ function getName (userID) {
             $.each(json.data, function(j, items) {	
                 arr.push(json.data[j])
             })
+            console.log(arr)
             var userGames = new Array()
             for (i=0; i < txt.length; i++) {
             for(j=0; j < arr.length; j++) {
