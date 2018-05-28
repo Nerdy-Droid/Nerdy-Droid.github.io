@@ -44,7 +44,7 @@ function getName (userID) {
                 }
                 }
           console.log(userGames);
-          function(userGames);	
+          getGames(userGames);	
         })
                  
       }
