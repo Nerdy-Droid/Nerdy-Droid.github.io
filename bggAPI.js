@@ -44,8 +44,8 @@ function getName (userID) {
                for (var i=0; i < userGames.length; i ++) {
                 array1[i] = new Array (userGames.length);
                 for (var j=0; j < userGames.length; j++) {
-                      array1[i][j] = userGames[j];
-                      console.log (array1[i][j] + "&emsp;")
+                      array1[i][j].push(userGames[j].names, userGames[j].weight);
+                      console.log (array1)
                }
                 }
 
