@@ -1,6 +1,12 @@
 function getGames (games) {
     $("#allGames").hide();
     $("#user").show();
+
+    $('#user tfoot #search').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
     $(document).ready(function() {
     $('#user').DataTable({
         data: games,
@@ -25,6 +31,18 @@ function getGames (games) {
             {data : "weight"}
            
         ]
+
+    var table = $('#user).DataTable();
+	 table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
     });
     });
     }
