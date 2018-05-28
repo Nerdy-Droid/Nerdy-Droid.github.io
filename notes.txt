@@ -100,7 +100,13 @@ $('#example').DataTable({
 
 </tbody>
 
-{title : "Avg Time"},
+function getGames (games) {
+$(document).ready(function() {
+$('#example').DataTable({
+	data: games,
+	columns: [
+		{title : "Name"},
+		{title : "Avg Time"},
 		{title : "BGG URL"},
 		{title : "Category"},
 		{title : "Designer"},
@@ -116,3 +122,7 @@ $('#example').DataTable({
         {title : "Rank"},
         {title : "Weight"},
         {title : "Year"}
+	]
+});
+});
+}

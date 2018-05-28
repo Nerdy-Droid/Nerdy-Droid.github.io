@@ -4,7 +4,7 @@ $(document).ready(function() {
         //'deferRender': false,
         'ajax'       : {
           "type"   : "POST",
-          "url"    : https://nerdy-droid.github.io/bggAPI.js,
+          "url"    : "https://nerdy-droid.github.io/bggAPI.js",
           "dataSrc": function (games) {
             var return_data = new Array();
             for(var i=0;i< games.length; i++){
