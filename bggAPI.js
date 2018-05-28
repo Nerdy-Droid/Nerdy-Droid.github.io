@@ -35,12 +35,12 @@ function getName (userID) {
             for (var i=0; i < txt.length; i++) {
             for(var j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
-                  userGames.push(json.data[j].names);
+                  userGames.push(json.data[j]);
                       
                 } 
                 }
                 }
-        console.log(userGames);
+          console.log(userGames);
           console.log(userGames[0].names);
           getGames(userGames);	
         })
