@@ -40,9 +40,9 @@ function getName (userID) {
                 }
                 }
           console.log(userGames);
-          
+          var userG = new Array();
           for (i=0; i < userGames.length; i++) {
-            console.log(Object.values(userGames[i]));
+            userG.push(Object.values(userGames[i]));
           }
         })
                  
