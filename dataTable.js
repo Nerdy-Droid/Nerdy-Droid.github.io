@@ -1,5 +1,5 @@
 function getGames (games) {
-$(document).read(function() {
+$(document).ready(function() {
 $('#example').DataTable({
 	data: games,
 	columns: [
