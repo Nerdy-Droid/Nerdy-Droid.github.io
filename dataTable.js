@@ -1,5 +1,4 @@
 function getGames (games) {
-    $('#user').show();
     $(document).ready(function() {
     $('#user').each( function () {
         var title = $(this).text();
