@@ -1,26 +1,27 @@
 function getGames (games) {
 $(document).ready(function() {
-$('#example').DataTable({
-	data: games,
-	columns: [
-		{title : "Name"},
-		{title : "Avg Time"},
-		{title : "BGG URL"},
-		{title : "Category"},
-		{title : "Designer"},
-		{title : "Game ID"},
-		{title : "Geek Rating"},
-		{title : "Image URL"},
-        {title : "Max Players"},
-        {title : "Max Time"},
-        {title : "Mechanic"},
-        {title : "Min Players"},
-        {title : "Min Time"},
-        {title : "Names"},
-        {title : "Rank"},
-        {title : "Weight"},
-        {title : "Year"}
-	]
+    $('#example_table').DataTable({
+        //'deferRender': false,
+        'ajax'       : {
+          "type"   : "POST",
+          "url"    : https://nerdy-droid.github.io/bggAPI.js,
+          "dataSrc": function (games) {
+            var return_data = new Array();
+            for(var i=0;i< games.length; i++){
+              return_data.push({
+                'Name': games[i].names,
+                'Cover'  : '<img src="' + json[i].image_url + '">',
+                'Weight' : json[i].weight
+              })
+            }
+            return return_data;
+          }
+        },
+        "columns"    : [
+          {'data': 'Cover'},
+          {'data': 'Name'},
+          {'data': 'Weight'}
+        ]
 });
 });
 }
