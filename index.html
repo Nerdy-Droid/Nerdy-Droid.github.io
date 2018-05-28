@@ -17,20 +17,16 @@
 }
 
 </style>
-
 </head>
-
 <body>
-<div class="container">
 <h1 align="center">Game Nite</h1><br/>
-
 
 
 <div id="search" class="searchBoxes">
 <form name="myForm">
 <span class="inputBox"> Search Your Collection: <input type="text" id="bggID" placeholder="Enter BGG User Name" name="numPlay">
 <input type="submit" id="getID" onclick=" getName($('#bggID').val()); return false;" value="Find Your Games"><br/></br/></span>
-<input type="submit" id="clearTab" onclick=" clearTable(); return false;" value="Clear Search Results"><br/></br/></span>
+<input type="submit" id="clearTab" onclick=" reload(); return false;" value="Clear Search Results"><br/></br/></span>
 </form>
 </div> <br/><br/>
 

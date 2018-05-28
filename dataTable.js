@@ -31,9 +31,6 @@ function getGames (games) {
     });
 }
 
-function clearTable () {
-    var table = $('#user').DataTable();
-     table
-        .clear()
-        .draw();   
-}
+    function reload() {
+        location.reload();
+    }
