@@ -50,7 +50,7 @@
 <script>
 $(document).ready(function() {
 	$( "#user" ).hide();
-	$('#example').DataTable({
+	$('#allGames').DataTable({
 		"ajax": "bggData.json",
 		"columns": [
 			{"data" : "names"},
@@ -70,6 +70,7 @@ $(document).ready(function() {
 <table id="user" class="hover" style="width:100%">
 		<thead>
 				<tr>
+				<th>Box Cover</th>
 				<th>Name</th>
 				<th>Min # Players</th>
 				<th>Max # Players</th>

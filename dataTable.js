@@ -4,7 +4,26 @@ function getGames (games) {
     $('#user').DataTable({
         data: games,
         columns: [
-            {data : "names"},
+            {data: "image_url"
+
+            "render": function (data,type,row,meta) {
+                if(type === 'display') {
+                    data ='<img src="' + image_url + '">',
+                }
+            }
+        
+        
+        },
+            {data : "names",
+                "render": function(data, type, row, meta){
+               if(type === 'display'){
+                   data = '<a href="' + bgg_url + '">' + data + '</a>';
+               }
+               
+               return data;
+            }
+        
+        },
             {data : "min_players"},
             {data : "max_players"},
             {data : "avg_time"},
