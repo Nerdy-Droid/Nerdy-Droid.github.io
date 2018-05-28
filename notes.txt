@@ -126,3 +126,24 @@ $('#example').DataTable({
 });
 });
 }
+
+unction allGames() {
+    $(document).ready(function() {
+        $('#user').DataTable({
+            "ajax": "bggData.json",
+            "columns": [
+                {"data" : "names"},
+                {"data" : "min_players"},
+                {"data" : "max_players"},
+                {"data" : "avg_time"},
+                {"data" : "year"},
+                {"data" : "geek_rating"},
+                {"data" : "mechanic"},
+                {"data" : "category"},
+                {"data" : "weight"}
+            ]
+        
+        });
+        });
+
+}
