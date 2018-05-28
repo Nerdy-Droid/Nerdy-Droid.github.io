@@ -1,8 +1,7 @@
 function getGames (games) {
-    $("#allGames").hide();
-    $("#user").show();
-        $(document).ready(function() {
-    $('#user tfoot #search').each( function () {
+    
+    $(document).ready(function() {
+    $('#user').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
     } );
@@ -48,10 +47,8 @@ function getGames (games) {
 
 
 function allGames() {
-    $( "#user" ).hide();
-    $( "#allGames" ).show();
     $(document).ready(function() {
-        $('#allGames').DataTable({
+        $('#user').DataTable({
             "ajax": "bggData.json",
             "columns": [
                 {"data" : "names"},
