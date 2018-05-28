@@ -1,9 +1,6 @@
 'use strict';
-(function () {
   const url = "https://boardgamegeek.com/xmlapi/collection/"
   
- getName('hengst2404')
-
 $('#getID').on('click', function (e) {
   getName($('#bggID').val())
 })
@@ -46,9 +43,9 @@ function getName (userID) {
                 }
                 }
                 }
-          console.log(userGames)	
+          console.log(userGames)
+          function (userGames)	
         })
                  
       }
-    }
-    }) ()
+    }  
