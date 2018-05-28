@@ -9,8 +9,9 @@ function getGames (games) {
                 if(type === 'display') {
                     data ='<img src="' + image_url + '">';
                 }
+                return data;
             }
-        return data;
+        
         },
             {data : "names",
                 "render": function(data, type, row, meta){
