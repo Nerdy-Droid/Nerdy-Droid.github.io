@@ -3,7 +3,7 @@ function getGames (games) {
     
     $(document).ready(function() {
     
-        $('#user tfoot #search').each( function () {
+        $('#user theader #search').each( function () {
             var title = $(this).text();
             $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
         } );
@@ -39,7 +39,7 @@ var table = $('#user').DataTable();
 	 table.columns().every( function () {
         var that = this;
  
-        $( 'input', this.footer() ).on( 'keyup change', function () {
+        $( 'input', this.header() ).on( 'keyup change', function () {
             if ( that.search() !== this.value ) {
                 that
                     .search( this.value )
