@@ -1,5 +1,6 @@
 function getGames (games) {
-     $(document).ready(function() {
+    $('#user').show();
+    $(document).ready(function() {
     $('#user').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
