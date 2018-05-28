@@ -1,10 +1,6 @@
 'use strict';
   const url = "https://boardgamegeek.com/xmlapi/collection/"
 
-$('#getID').on('click', function (e) {
-  getName($('#bggID').val())
-})
-
 function getName (userID) {
   
   var string = url + userID     
