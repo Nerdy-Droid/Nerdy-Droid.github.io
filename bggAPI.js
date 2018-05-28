@@ -44,7 +44,7 @@ function getName (userID) {
           for (i=0; i < userGames.length; i++) {
             userG.push(Object.values(userGames[i]));
           }
-          getGames (userG)
+          getGames (userGames)
         })
                  
       }
