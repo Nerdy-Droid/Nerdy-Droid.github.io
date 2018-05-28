@@ -31,7 +31,7 @@ function getGames (games) {
             {data : "weight"}
            
         ]
-
+    });
     var table = $('#user).DataTable();
 	 table.columns().every( function () {
         var that = this;
@@ -43,6 +43,5 @@ function getGames (games) {
                     .draw();
             }
         } );
-    });
-    });
+     });
     }
