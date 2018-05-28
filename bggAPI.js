@@ -42,7 +42,7 @@ function getName (userID) {
           console.log(userGames);
           var userG = new Array (); 
           for (var b=0; b < userGames.length; b++) {
-          userG[b].push([])
+          userG[b].push(new Array())
           }
           for (var a=0; a < userGames.length; a++) {
                     userG[a][a].push(json.data[j].names,json.data[j].weight);
