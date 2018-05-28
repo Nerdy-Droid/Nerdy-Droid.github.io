@@ -42,7 +42,7 @@ function getName (userID) {
           console.log(userGames);
           
           for (i=0; i < userGames.length; i++) {
-            console.log(Object.values(userGames[i]);
+            console.log(Object.values(userGames[i]));
           }
         })
                  
