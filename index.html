@@ -32,7 +32,42 @@
 </form>
 </div>
 
-<table id="example" class="dataTable" style="width:100%"></table>
+<table id="allGames" class="dataTable" style="width:100%">
+		<thead>
+				<tr>
+				<th>Name</th>
+				<th>Min # Players</th>
+				<th>Max # Players</th>
+				<th>Avg Time</th>
+				<th>Year</th>
+				<th>Geek Rating</th>
+				<th>Mechanic</th>
+				<th>Category</th>
+				<th>Weight</th>
+				</tr>
+				</thead>
+</table>
+<script>
+$(document).ready(function() {
+	$( "#user" ).hide();
+	$('#example').DataTable({
+		"ajax": "bggData.json",
+		"columns": [
+			{"data" : "names"},
+			{"data" : "min_players"},
+			{"data" : "max_players"},
+			{"data" : "avg_time"},
+			{"data" : "year"},
+			{"data" : "geek_rating"},
+			{"data" : "mechanic"},
+			{"data" : "category"},
+			{"data" : "weight"}
+		]
+	
+	});
+	});
+</script>
+<table id="user" class="dataTable" style="width:100%"></table>
 <script type="text/javascript" src="bggAPI.js"></script>
 <script type="text/javascript" src="dataTable.js"></script>
 </body>

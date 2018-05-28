@@ -1,10 +1,20 @@
 function getGames (games) {
+    $( "#user" ).show();
     $(document).ready(function() {
-    $('#example').DataTable({
+    $('#user').DataTable({
         data: games,
         columns: [
             {title : "Rank"},
-            {title : "BGG URL"},
+            {title : "BGG URL",
+                    "render": funcion (data,type,row,meta) {
+                        for (i=0; i < games.length; i++) {
+                        if (type === 'display') {
+                        data = '<a href="' + data + '">'+ games[i].names +  '</a>';
+                        }
+                }
+                return data;
+              }
+            },
             {title : "BGG ID"},
             {title : "Name"},
             {title : "Min Player"},

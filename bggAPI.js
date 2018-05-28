@@ -2,7 +2,7 @@
   const url = "https://boardgamegeek.com/xmlapi/collection/"
 
 function getName (userID) {
-  
+  $( "#allGames" ).hide();
   var string = url + userID     
   var xhttp = new XMLHttpRequest();
        xhttp.onreadystatechange = function() {
