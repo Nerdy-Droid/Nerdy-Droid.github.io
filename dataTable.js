@@ -3,8 +3,7 @@ $(document).ready(function() {
     $('#example').DataTable({
         data: games,
         columns: [
-            {title : "Name"},
-            {title : "Weight"}
+            {title : "Name"}
         ]
     });
    });
