@@ -44,7 +44,7 @@ function getName (userID) {
           var userG = new Array();
           for (i=0; i < userGames.length; i++) {
             userG.push(Object.values(userGames[i]));
-
+          }
             var missingGames = new Array()
             for (var i=0; i < txt.length; i++) {
             for(var j=0; j < arr.length; j++) {
@@ -52,6 +52,8 @@ function getName (userID) {
                   missingGames.push(txt[j]);
                   console.log(missingGames)
           }
+        }
+      }
           getGames (userGames)
         })
                  
