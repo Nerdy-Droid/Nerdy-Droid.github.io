@@ -1,7 +1,8 @@
 'use strict';
   const url = "https://boardgamegeek.com/xmlapi/collection/"
+  var userGames; 
 
-function getName (userID) {
+  function getName (userID) {
   $( "#allGames" ).hide();
   var string = url + userID     
   var xhttp = new XMLHttpRequest();
@@ -65,6 +66,6 @@ function getName (userID) {
     }
 
     function randomGame() {
-        var randomItem = userGames[Math.floor(Math.random()*userGames.length)]
-        return alert(randomItem);
-    }
+      var randomItem = userGames[Math.floor(Math.random()*userGames.length)]
+      return alert(randomItem);
+  }
