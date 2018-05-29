@@ -32,16 +32,18 @@
             })
             console.log(arr)
             var userGames = new Array()
+            var missingGames = new Array()
             for (var i=0; i < txt.length; i++) {
             for(var j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
                   userGames.push(json.data[j]);
-                    
-                } 
+                } else {
+                  missingGames.push(txt[i]);
+                }
                 }
                 }
           console.log(userGames);
-                
+               
           var userG = new Array();
           for (i=0; i < userGames.length; i++) {
             userG.push(Object.values(userGames[i]));
@@ -56,8 +58,8 @@
       var missingGames = new Array()
       for (var i=0; i < txt.length; i++) {
       for(var j=0; j < arr.length; j++) {
-          if (txt[j] != json.data[i].game_id) {
-            missingGames.push(txt[j]);
+          if (json.data[i].game_id != txt[j] ) {
+            missingGames.push(json.data[i].game_id);
             console.log(missingGames)
     }
   }
