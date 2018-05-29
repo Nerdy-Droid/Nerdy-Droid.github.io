@@ -40,10 +40,17 @@ function getName (userID) {
                 }
                 }
           console.log(userGames);
-                       
+                
           var userG = new Array();
           for (i=0; i < userGames.length; i++) {
             userG.push(Object.values(userGames[i]));
+
+            var missingGames = new Array()
+            for (var i=0; i < txt.length; i++) {
+            for(var j=0; j < arr.length; j++) {
+                if (txt[j] != json.data[i].game_id) {
+                  missingGames.push(txt[j]);
+                  console.log(missingGames)
           }
           getGames (userGames)
         })
