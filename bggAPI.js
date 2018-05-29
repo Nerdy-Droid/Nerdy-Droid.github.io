@@ -64,7 +64,7 @@ function getName (userID) {
 
     }
 
-    function randomGame(games) {
-        var randomItem = games[Math.floor(Math.random()*games.length)]
+    function randomGame() {
+        var randomItem = userGames[Math.floor(Math.random()*userGames.length)]
         return alert(randomItem);
     }
