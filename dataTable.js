@@ -23,14 +23,14 @@ console.log(games)
             }
         
         },
-        {data : "year"},
-        {data : "geek_rating"},
-        {data : "mechanic"},
-        {data : "weight"},
-        {data : "avg_time"},
-        {data : "category"},  
-        {data : "min_players"},
-        {data : "max_players"}
+                        {data : "min_players"},
+						{data : "max_players"},
+						{data : "year"},
+						{data : "geek_rating"},
+						{data : "mechanic"},
+						{data : "weight"},
+						{data : "avg_time"},
+						{data : "category"} 
  ]
    
 });
