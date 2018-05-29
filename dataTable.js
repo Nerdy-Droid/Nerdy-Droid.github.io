@@ -3,7 +3,7 @@ function getGames (games) {
     
     $(document).ready(function() {
     
-        $('#user tfooter #search').each( function () {
+        $('#user tfoot #search').each( function () {
             var title = $(this).text();
             $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
         } );
