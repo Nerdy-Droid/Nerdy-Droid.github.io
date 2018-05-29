@@ -37,14 +37,11 @@
             for(var j=0; j < arr.length; j++) {
                 if (txt[i] === json.data[j].game_id) {
                   userGames.push(json.data[j]);
-                } else {
-                  missingGames.push(txt[i]);
-                }
+                } 
                 }
                 }
           console.log(userGames);
-          console.log(missingGames);
-               
+                      
           var userG = new Array();
           for (i=0; i < userGames.length; i++) {
             userG.push(Object.values(userGames[i]));
