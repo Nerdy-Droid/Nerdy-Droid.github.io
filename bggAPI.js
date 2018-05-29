@@ -1,6 +1,5 @@
 'use strict';
   const url = "https://boardgamegeek.com/xmlapi/collection/"
-  var userGames; 
 
   function getName (userID) {
   $( "#allGames" ).hide();
@@ -65,7 +64,4 @@
 
     }
 
-    function randomGame() {
-      var randomItem = userGames[Math.floor(Math.random()*userGames.length)]
-      return alert(randomItem);
-  }
+    

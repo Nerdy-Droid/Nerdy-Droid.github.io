@@ -51,3 +51,8 @@ var table = $('#user').DataTable();
     function reload() {
         location.reload();
     }
+
+    function randomGame() {
+        var randomItem = userGames[Math.floor(Math.random()*userGames.length)]
+        return alert(randomItem);
+    }
