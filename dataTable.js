@@ -23,16 +23,15 @@ console.log(games)
             }
         
         },
-            {data : "min_players"},
-            {data : "max_players"},
-            {data : "avg_time"},
-            {data : "year"},
-            {data : "geek_rating"},
-            {data : "mechanic"},
-            {data : "category"},
-            {data : "weight"}
-           
-        ]
+        {data : "mechanic"},
+        {data : "category"},   
+        {data : "year"},
+        {data : "geek_rating"},
+        {data : "weight"},
+        {data : "avg_time"},
+        {data : "min_players"},
+        {data : "max_players"}
+ ]
    
 });
 var table = $('#user').DataTable();
