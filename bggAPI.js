@@ -43,6 +43,7 @@
                 }
                 }
           console.log(userGames);
+          console.log(missingGames);
                
           var userG = new Array();
           for (i=0; i < userGames.length; i++) {

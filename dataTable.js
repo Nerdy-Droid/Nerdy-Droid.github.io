@@ -8,8 +8,6 @@ function getGames (games) {
             $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
         } );
 
-console.log(games)
-
        $('#user').DataTable({
         data: games,
         columns: [
