@@ -23,6 +23,23 @@ div.container {
     width: inherit !important;
 }
 
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+.w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+.w3-padding-small{padding:4px 8px!important}.w3-padding{padding:8px 16px!important}.w3-padding-large{padding:12px 24px!important}
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}.w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+.w3-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+
+
+.w3-center .w3-bar{display:inline-block;width:auto}
+.w3-bar-block.w3-center .w3-bar-item{text-align:center}
+.w3-center{text-align:center!important}
+.w3-centered tr th,.w3-centered tr td{text-align:center}
+.w3-xxxlarge{font-size:48px!important}.w3-jumbo{font-size:64px!important}
+.w3-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
+.w3-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
 </style>
 </head>
 <body>
@@ -35,7 +52,7 @@ div.container {
 					<span class="inputBox"> Search Your BGG Collection: <input type="text" id="bggID" placeholder="Enter BGG User Name" name="numPlay">
 					<input class="w3-btn w3-large w3-dark-grey w3-hover-light-grey" type="submit" id="getID" onclick=" getName($('#bggID').val()); return false;" value="Find My Games">
 					<input class="w3-btn w3-large w3-dark-grey w3-hover-light-grey" type="submit" id="reload" onclick=" reload(); return false;" value="Clear Results"><br/></br/></span>
-					<input class="w3-btn w3-large w3-dark-grey w3-hover-light-grey" type="submit" id="random" onclick="randomGame()" value="Random Game"><br/>
+					<!-- <input class="w3-btn w3-large w3-dark-grey w3-hover-light-grey" type="submit" id="random" onclick="randomGame()" value="Random Game"><br/> -->
 					</form>  
 			</div>
 		</div>
