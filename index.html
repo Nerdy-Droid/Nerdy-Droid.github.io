@@ -38,6 +38,15 @@ div.container {
 .w3-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
 .w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
 .w3-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.w3-btn,.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+.w3-btn.w3-disabled:hover,.w3-btn:disabled:hover{box-shadow:none}
+.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
+.w3-large{font-size:18px!important}
+.w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
 </style>
 </head>
 <body>
@@ -62,14 +71,6 @@ div.container {
 			<p>Search your <a href="https://boardgamegeek.com/"  target="_blank">Board Game Geek</a> collection by entering your user name above.</p>
 	</div><br/><br/>
 
-
-<!-- <div id="search" class="searchBoxes">
-<form name="myForm">
-<span class="inputBox"> Search Your Collection: <input type="text" id="bggID" placeholder="Enter BGG User Name" name="numPlay">
-<input type="submit" id="getID" onclick=" getName($('#bggID').val()); return false;" value="Find Your Games">
-<input type="submit" id="clearTab" onclick=" reload(); return false;" value="Clear Search Results"><br/></br/></span>
-</form> 
-</div> <br/><br/>-->
 
 <table id="user"  style="display:none" class="display dataTable" style="width:100%" role="grid">
 		<thead>
