@@ -100,6 +100,9 @@ $('#example').DataTable({
 
 </tbody>
 
+firebase - Google version of AWS
+
+
 function getGames (games) {
 $(document).ready(function() {
 $('#example').DataTable({
